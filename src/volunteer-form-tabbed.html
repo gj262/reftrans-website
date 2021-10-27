@@ -13,382 +13,413 @@
             <form class="tabbed-form" name="rtv" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="post"
                 onsubmit="return rtv_handleSubmit(event)">
                 <header class="tabs">
-                    <button class="tablink" type="button" data-tab-target="contact-info">Contact Info</button>
-                    <button class="tablink" type="button" data-tab-target="personal-info">Personal Info</button>
-                    <button class="tablink" type="button" data-tab-target="work-info">Work Info</button>
-                    <button class="tablink" type="button" data-tab-target="education-info">Education Info</button>
-                    <button class="tablink" type="button" data-tab-target="volunteer-preferences">Volunteer Info</button>
-                    <button class="tablink" type="button" data-tab-target="references">References</button>
-                    <button class="tablink" type="button" data-tab-target="volunteer-agreement">Volunteer Agreement</button>
-                </header>
+                    <div class="tab">
+                        <a class="tablink" href="#contact-info">Contact Info</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tablink" href="#personal-info">Personal Info</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tablink" href="#work-info">Work Info</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tablink" href="#education-info">Education Info</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tablink" href="#volunteer-preferences">Volunteer Info</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tablink" href="#references">References</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tablink" href="#volunteer-agreement">Volunteer Agreement</a>
+                    </div>
+                    </header>
                 <div class="tab-content-panel">
                     <div class="tab-content" id="contact-info">
                         <fieldset class="tabbed-fieldset">
-                            <div class="rtv-form-group">
-                                <label for="first_name">First Name</label>
-                                <input id="first_name" maxlength="40" name="first_name" type="text" autocomplete="given-name" required />
+                            <div class="grid-group">
+                                <div class="rtv-form-group">
+                                    <label for="prefix">Prefix</label>
+                                    <select id="prefix" title="Prefix" name="prefix">
+                                        <option selected="selected">--None--</option>
+                                        <option value="Mr">Mr</option>
+                                        <option value="Ms">Ms</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Mz">Mz</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="rtv-form-group">
+                                    <label for="first_name">First Name</label>
+                                    <input id="first_name" maxlength="40" name="first_name" type="text" autocomplete="given-name" required />
+                                </div>
+
+                                <div class="rtv-form-group">
+                                    <label for="last_name">Last Name</label>
+                                    <input id="last_name" maxlength="80" name="last_name" type="text" autocomplete="family-name" required />
+                                </div>
+
+                                <div class="rtv-form-group first-two-columns">
+                                    <label for="street">Street</label>
+                                    <textarea id="street" cols="20" rows="2" name="street" autocomplete="street-address"></textarea>
+                                </div>
+
+                                <div class="rtv-form-group">
+                                    <label for="city">city</label>
+                                    <input id="city" maxlength="40" name="city" type="text" autocomplete="address-level2" />
+                                </div>
+
+                                <div class="rtv-form-group">
+                                    <label for="state">state/province</label>
+                                    <input id="state" maxlength="20" name="state" type="text" autocomplete="address-level1" />
+                                </div>
+
+                                <div class="rtv-form-group">
+                                    <label for="zip">zip</label>
+                                    <input id="zip" maxlength="20" name="zip" type="text" autocomplete="postal-code" />
+                                </div>
+
+                                <div class="rtv-form-group">
+                                    <label for="country">country</label>
+                                    <input id="country" maxlength="40" name="country" type="text" autocomplete="country" />
+                                </div>
                             </div>
 
-                            <div class="rtv-form-group">
-                                <label for="last_name">Last Name</label>
-                                <input id="last_name" maxlength="80" name="last_name" type="text" autocomplete="family-name" required />
+                            <div class="grid-group">
+                                <div class="rtv-form-group">
+                                    <label for="00Nj0000002TW7F">Geographical Area</label>
+                                    <select id="00Nj0000002TW7F" title="Geographical Area" name="00Nj0000002TW7F">
+                                        <option selected="selected">--None--</option>
+                                        <option value="South Bay">South Bay</option>
+                                        <option value="East Bay">East Bay</option>
+                                        <option value="San Francisco">San Francisco</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="rtv-form-group">
+                                    <label for="00Nj0000002TXLr">Neighborhood </label>
+                                    <select id="00Nj0000002TXLr" title="Neighborhood" name="00Nj0000002TXLr">
+                                        <option selected="selected">--None--</option>
+                                        <option value="EB-Alameda">EB-Alameda</option>
+                                        <option value="EB-Albany">EB-Albany</option>
+                                        <option value="EB-Antioch">EB-Antioch</option>
+                                        <option value="EB-Berkeley">EB-Berkeley</option>
+                                        <option value="EB-Castro Valley">EB-Castro Valley</option>
+                                        <option value="EB-Concord">EB-Concord</option>
+                                        <option value="EB-Danville">EB-Danville</option>
+                                        <option value="EB-Dublin">EB-Dublin</option>
+                                        <option value="EB-El Cerrito">EB-El Cerrito</option>
+                                        <option value="EB-El Sobrante">EB-El Sobrante</option>
+                                        <option value="EB-Emeryville">EB-Emeryville</option>
+                                        <option value="EB-Fremont">EB-Fremont</option>
+                                        <option value="EB-Glenview">EB-Glenview</option>
+                                        <option value="EB-Hayward">EB-Hayward</option>
+                                        <option value="EB-Hercules">EB-Hercules</option>
+                                        <option value="EB-Kensington">EB-Kensington</option>
+                                        <option value="EB-Lafayette">EB-Lafayette</option>
+                                        <option value="EB-Martinez">EB-Martinez</option>
+                                        <option value="EB-Millsmont">EB-Millsmont</option>
+                                        <option value="EB-North Berkeley">EB-North Berkeley</option>
+                                        <option value="EB-Oak Knoll">EB-Oak Knoll</option>
+                                        <option value="EB-Oakland">EB-Oakland</option>
+                                        <option value="EB-Oakland-China Hill">EB-Oakland-China Hill</option>
+                                        <option value="EB-Oakland-Chinatown">EB-Oakland-Chinatown</option>
+                                        <option value="EB-Oakland-Dimond District">EB-Oakland-Dimond District</option>
+                                        <option value="EB-Oakland-Downtown">EB-Oakland-Downtown</option>
+                                        <option value="EB-Oakland-East">EB-Oakland-East</option>
+                                        <option value="EB-Oakland-Eastmont Mall">EB-Oakland-Eastmont Mall</option>
+                                        <option value="EB-Oakland-Fruitvale">EB-Oakland-Fruitvale</option>
+                                        <option value="EB-Oakland-High St.">EB-Oakland-High St.</option>
+                                        <option value="EB-Oakland-Hills">EB-Oakland-Hills</option>
+                                        <option value="EB-Oakland-Jack London">EB-Oakland-Jack London</option>
+                                        <option value="EB-Oakland-Lake Merritt">EB-Oakland-Lake Merritt</option>
+                                        <option value="EB-Oakland-Laurel">EB-Oakland-Laurel</option>
+                                        <option value="EB-Oakland-Maxwell Park">EB-Oakland-Maxwell Park</option>
+                                        <option value="EB-Oakland-North/Temescal">EB-Oakland-North/Temescal</option>
+                                        <option value="EB-Oakland-San Antonio/Eastlake">EB-Oakland-San Antonio/Eastlake</option>
+                                        <option value="EB-Oakland-Temescal">EB-Oakland-Temescal</option>
+                                        <option value="EB-Oakland-West Oakland">EB-Oakland-West Oakland</option>
+                                        <option value="EB-Oakmore">EB-Oakmore</option>
+                                        <option value="EB-Orinda">EB-Orinda</option>
+                                        <option value="EB-Piedmont">EB-Piedmont</option>
+                                        <option value="EB-Pinole">EB-Pinole</option>
+                                        <option value="EB-Pittsburg">EB-Pittsburg</option>
+                                        <option value="EB-Pleasant Hill">EB-Pleasant Hill</option>
+                                        <option value="EB-Pleasanton">EB-Pleasanton</option>
+                                        <option value="EB-Redwood Heights">EB-Redwood Heights</option>
+                                        <option value="EB-Richmond">EB-Richmond</option>
+                                        <option value="EB-Ridgemont">EB-Ridgemont</option>
+                                        <option value="EB-San Leandro">EB-San Leandro</option>
+                                        <option value="EB-San Lorenzo">EB-San Lorenzo</option>
+                                        <option value="EB-San Pablo">EB-San Pablo</option>
+                                        <option value="EB-Union City">EB-Union City</option>
+                                        <option value="EB-Walnut Creek">EB-Walnut Creek</option>
+                                        <option value="SB-Almaden">SB-Almaden</option>
+                                        <option value="SB-Alviso">SB-Alviso</option>
+                                        <option value="SB-Atherton">SB-Atherton</option>
+                                        <option value="SB-Belmont">SB-Belmont</option>
+                                        <option value="SB-Berryessa">SB-Berryessa</option>
+                                        <option value="SB-Campbell">SB-Campbell</option>
+                                        <option value="SB-Cimarron">SB-Cimarron</option>
+                                        <option value="SB-Commodore">SB-Commodore</option>
+                                        <option value="SB-Cupertino">SB-Cupertino</option>
+                                        <option value="SB-Evergreen">SB-Evergreen</option>
+                                        <option value="SB-Los Altos">SB-Los Altos</option>
+                                        <option value="SB-Los Gatos">SB-Los Gatos</option>
+                                        <option value="SB-Menlo Park">SB-Menlo Park</option>
+                                        <option value="SB-Millbrae">SB-Millbrae</option>
+                                        <option value="SB-Milpitas">SB-Milpitas</option>
+                                        <option value="SB-Morgan Hill">SB-Morgan Hill</option>
+                                        <option value="SB-Mountain View">SB-Mountain View</option>
+                                        <option value="SB-Newark">SB-Newark</option>
+                                        <option value="SB-Palo Alto">SB-Palo Alto</option>
+                                        <option value="SB-Peninsula">SB-Peninsula</option>
+                                        <option value="SB-Redwood City">SB-Redwood City</option>
+                                        <option value="SB-San Bruno">SB-San Bruno</option>
+                                        <option value="SB-San Carlos">SB-San Carlos</option>
+                                        <option value="SB-San Jose">SB-San Jose</option>
+                                        <option value="SB-Santa Clara">SB-Santa Clara</option>
+                                        <option value="SB-Saratoga">SB-Saratoga</option>
+                                        <option value="SB-Sierramont">SB-Sierramont</option>
+                                        <option value="SB-Sunnyvale">SB-Sunnyvale</option>
+                                        <option value="SB-Sunol">SB-Sunol</option>
+                                        <option value="SB-Sweigert">SB-Sweigert</option>
+                                        <option value="SB-Willow Glen">SB-Willow Glen</option>
+                                        <option value="SF-Balboa Terrace">SF-Balboa Terrace</option>
+                                        <option value="SF-Bayshore">SF-Bayshore</option>
+                                        <option value="SF-Bayview">SF-Bayview</option>
+                                        <option value="SF-Bernal Heights">SF-Bernal Heights</option>
+                                        <option value="SF-Brisbane">SF-Brisbane</option>
+                                        <option value="SF-Broadmoor">SF-Broadmoor</option>
+                                        <option value="SF-Burlingame">SF-Burlingame</option>
+                                        <option value="SF-Castro">SF-Castro</option>
+                                        <option value="SF-Chinatown">SF-Chinatown</option>
+                                        <option value="SF-Colma">SF-Colma</option>
+                                        <option value="SF-Cow Hollow">SF-Cow Hollow</option>
+                                        <option value="SF-Crocker">SF-Crocker</option>
+                                        <option value="SF-Crocker Amazon">SF-Crocker Amazon</option>
+                                        <option value="SF-Daly City">SF-Daly City</option>
+                                        <option value="SF-Downtown">SF-Downtown</option>
+                                        <option value="SF-Excelsior">SF-Excelsior</option>
+                                        <option value="SF-Financial District">SF-Financial District</option>
+                                        <option value="SF-Glen Park">SF-Glen Park</option>
+                                        <option value="SF-Haight-Ashbury">SF-Haight-Ashbury</option>
+                                        <option value="SF-Hayes Valley">SF-Hayes Valley</option>
+                                        <option value="SF-Hillside">SF-Hillside</option>
+                                        <option value="SF-Hunter's Point">SF-Hunter's Point</option>
+                                        <option value="SF-Ingleside">SF-Ingleside</option>
+                                        <option value="SF-Marina">SF-Marina</option>
+                                        <option value="SF-Merced">SF-Merced</option>
+                                        <option value="SF-Mission Bay">SF-Mission Bay</option>
+                                        <option value="SF-Mission District">SF-Mission District</option>
+                                        <option value="SF-Nob Hill">SF-Nob Hill</option>
+                                        <option value="SF-Noe Valley">SF-Noe Valley</option>
+                                        <option value="SF-North Beach">SF-North Beach</option>
+                                        <option value="SF-Oceanview">SF-Oceanview</option>
+                                        <option value="SF-Outer Richmond">SF-Outer Richmond</option>
+                                        <option value="SF-Pacific Heights">SF-Pacific Heights</option>
+                                        <option value="SF-Pacifica">SF-Pacifica</option>
+                                        <option value="SF-Peninsula">SF-Peninsula</option>
+                                        <option value="SF-Portola">SF-Portola</option>
+                                        <option value="SF-Potrero Hill">SF-Potrero Hill</option>
+                                        <option value="SF-Presidio">SF-Presidio</option>
+                                        <option value="SF-Richmond">SF-Richmond</option>
+                                        <option value="SF-Russian Hill">SF-Russian Hill</option>
+                                        <option value="SF-San Mateo">SF-San Mateo</option>
+                                        <option value="SF-Soma">SF-Soma</option>
+                                        <option value="SF-South San Francisco">SF-South San Francisco</option>
+                                        <option value="SF-Southeast">SF-Southeast</option>
+                                        <option value="SF-St. Francis">SF-St. Francis</option>
+                                        <option value="SF-Sunset">SF-Sunset</option>
+                                        <option value="SF-Tenderloin">SF-Tenderloin</option>
+                                        <option value="SF-Twin Peaks">SF-Twin Peaks</option>
+                                        <option value="SF-Visitacion Valley">SF-Visitacion Valley</option>
+                                        <option value="SF-Western Addition">SF-Western Addition</option>
+                                    </select>
+                                    <p class="input-help">(EB=East Bay; SF=San Francisco; SB=South Bay)</p>
+                                </div>
+
+                                <div class="rtv-form-group">
+                                    <label for="00Nj0000002TXZc">Other Neighborhood</label>
+                                    <input id="00Nj0000002TXZc" maxlength="200" name="00Nj0000002TXZc" type="text" />
+                                    <p class="input-help">(Please write the name of your home neighborhood if it is not listed above.)</p>
+                                </div>
                             </div>
 
-                            <h3>Home Address</h3>
+                            <div class="grid-group">
+                                <div class="rtv-form-group">
+                                    <label for="phone">phone</label>
+                                    <input id="phone" maxlength="40" name="phone" type="tel" autocomplete="mobile" />
+                                </div>
 
-                            <div class="rtv-form-group">
-                                <label for="street">Street</label>
-                                <textarea id="street" cols="20" rows="2" name="street" autocomplete="street-address"></textarea>
+                                <div class="rtv-form-group last-two-columns">
+                                    <label for="email">email address</label>
+                                    <input id="email" maxlength="80" name="email" type="email" autocomplete="email" required />
+                                </div>
                             </div>
 
-                            <div class="rtv-form-group">
-                                <label for="city">city</label>
-                                <input id="city" maxlength="40" name="city" type="text" autocomplete="address-level2" />
-                            </div>
+                            <div class="grid-group">
+                                <div class="rtv-form-group">
+                                    <label for="00Nj0000002TVTA">Emergency Contact</label>
+                                    <input id="00Nj0000002TVTA" maxlength="200" name="00Nj0000002TVTA" size="20" type="text" />
+                                    <p class="input-help">(Please include the Emergency Contact's name and relationship to you.)</p>
+                                </div>
 
-                            <div class="rtv-form-group">
-                                <label for="state">state/province</label>
-                                <input id="state" maxlength="20" name="state" type="text" autocomplete="address-level1" />
-                            </div>
-
-                            <div class="rtv-form-group">
-                                <label for="zip">zip</label>
-                                <input id="zip" maxlength="20" name="zip" type="text" autocomplete="postal-code" />
-                            </div>
-
-                            <div class="rtv-form-group">
-                                <label for="country">country</label>
-                                <input id="country" maxlength="40" name="country" type="text" autocomplete="country" />
-                            </div>
-
-                            <h3>Location Where You Live</h3>
-
-                            <div class="rtv-form-group">
-                                <label for="00Nj0000002TW7F">Geographical Area</label>
-                                <select id="00Nj0000002TW7F" title="Geographical Area" name="00Nj0000002TW7F">
-                                    <option selected="selected">--None--</option>
-                                    <option value="South Bay">South Bay</option>
-                                    <option value="East Bay">East Bay</option>
-                                    <option value="San Francisco">San Francisco</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </div>
-
-                            <div class="rtv-form-group">
-                                <label for="00Nj0000002TXLr">Neighborhood </label>
-                                <select id="00Nj0000002TXLr" title="Neighborhood" name="00Nj0000002TXLr">
-                                    <option selected="selected">--None--</option>
-                                    <option value="EB-Alameda">EB-Alameda</option>
-                                    <option value="EB-Albany">EB-Albany</option>
-                                    <option value="EB-Antioch">EB-Antioch</option>
-                                    <option value="EB-Berkeley">EB-Berkeley</option>
-                                    <option value="EB-Castro Valley">EB-Castro Valley</option>
-                                    <option value="EB-Concord">EB-Concord</option>
-                                    <option value="EB-Danville">EB-Danville</option>
-                                    <option value="EB-Dublin">EB-Dublin</option>
-                                    <option value="EB-El Cerrito">EB-El Cerrito</option>
-                                    <option value="EB-El Sobrante">EB-El Sobrante</option>
-                                    <option value="EB-Emeryville">EB-Emeryville</option>
-                                    <option value="EB-Fremont">EB-Fremont</option>
-                                    <option value="EB-Glenview">EB-Glenview</option>
-                                    <option value="EB-Hayward">EB-Hayward</option>
-                                    <option value="EB-Hercules">EB-Hercules</option>
-                                    <option value="EB-Kensington">EB-Kensington</option>
-                                    <option value="EB-Lafayette">EB-Lafayette</option>
-                                    <option value="EB-Martinez">EB-Martinez</option>
-                                    <option value="EB-Millsmont">EB-Millsmont</option>
-                                    <option value="EB-North Berkeley">EB-North Berkeley</option>
-                                    <option value="EB-Oak Knoll">EB-Oak Knoll</option>
-                                    <option value="EB-Oakland">EB-Oakland</option>
-                                    <option value="EB-Oakland-China Hill">EB-Oakland-China Hill</option>
-                                    <option value="EB-Oakland-Chinatown">EB-Oakland-Chinatown</option>
-                                    <option value="EB-Oakland-Dimond District">EB-Oakland-Dimond District</option>
-                                    <option value="EB-Oakland-Downtown">EB-Oakland-Downtown</option>
-                                    <option value="EB-Oakland-East">EB-Oakland-East</option>
-                                    <option value="EB-Oakland-Eastmont Mall">EB-Oakland-Eastmont Mall</option>
-                                    <option value="EB-Oakland-Fruitvale">EB-Oakland-Fruitvale</option>
-                                    <option value="EB-Oakland-High St.">EB-Oakland-High St.</option>
-                                    <option value="EB-Oakland-Hills">EB-Oakland-Hills</option>
-                                    <option value="EB-Oakland-Jack London">EB-Oakland-Jack London</option>
-                                    <option value="EB-Oakland-Lake Merritt">EB-Oakland-Lake Merritt</option>
-                                    <option value="EB-Oakland-Laurel">EB-Oakland-Laurel</option>
-                                    <option value="EB-Oakland-Maxwell Park">EB-Oakland-Maxwell Park</option>
-                                    <option value="EB-Oakland-North/Temescal">EB-Oakland-North/Temescal</option>
-                                    <option value="EB-Oakland-San Antonio/Eastlake">EB-Oakland-San Antonio/Eastlake</option>
-                                    <option value="EB-Oakland-Temescal">EB-Oakland-Temescal</option>
-                                    <option value="EB-Oakland-West Oakland">EB-Oakland-West Oakland</option>
-                                    <option value="EB-Oakmore">EB-Oakmore</option>
-                                    <option value="EB-Orinda">EB-Orinda</option>
-                                    <option value="EB-Piedmont">EB-Piedmont</option>
-                                    <option value="EB-Pinole">EB-Pinole</option>
-                                    <option value="EB-Pittsburg">EB-Pittsburg</option>
-                                    <option value="EB-Pleasant Hill">EB-Pleasant Hill</option>
-                                    <option value="EB-Pleasanton">EB-Pleasanton</option>
-                                    <option value="EB-Redwood Heights">EB-Redwood Heights</option>
-                                    <option value="EB-Richmond">EB-Richmond</option>
-                                    <option value="EB-Ridgemont">EB-Ridgemont</option>
-                                    <option value="EB-San Leandro">EB-San Leandro</option>
-                                    <option value="EB-San Lorenzo">EB-San Lorenzo</option>
-                                    <option value="EB-San Pablo">EB-San Pablo</option>
-                                    <option value="EB-Union City">EB-Union City</option>
-                                    <option value="EB-Walnut Creek">EB-Walnut Creek</option>
-                                    <option value="SB-Almaden">SB-Almaden</option>
-                                    <option value="SB-Alviso">SB-Alviso</option>
-                                    <option value="SB-Atherton">SB-Atherton</option>
-                                    <option value="SB-Belmont">SB-Belmont</option>
-                                    <option value="SB-Berryessa">SB-Berryessa</option>
-                                    <option value="SB-Campbell">SB-Campbell</option>
-                                    <option value="SB-Cimarron">SB-Cimarron</option>
-                                    <option value="SB-Commodore">SB-Commodore</option>
-                                    <option value="SB-Cupertino">SB-Cupertino</option>
-                                    <option value="SB-Evergreen">SB-Evergreen</option>
-                                    <option value="SB-Los Altos">SB-Los Altos</option>
-                                    <option value="SB-Los Gatos">SB-Los Gatos</option>
-                                    <option value="SB-Menlo Park">SB-Menlo Park</option>
-                                    <option value="SB-Millbrae">SB-Millbrae</option>
-                                    <option value="SB-Milpitas">SB-Milpitas</option>
-                                    <option value="SB-Morgan Hill">SB-Morgan Hill</option>
-                                    <option value="SB-Mountain View">SB-Mountain View</option>
-                                    <option value="SB-Newark">SB-Newark</option>
-                                    <option value="SB-Palo Alto">SB-Palo Alto</option>
-                                    <option value="SB-Peninsula">SB-Peninsula</option>
-                                    <option value="SB-Redwood City">SB-Redwood City</option>
-                                    <option value="SB-San Bruno">SB-San Bruno</option>
-                                    <option value="SB-San Carlos">SB-San Carlos</option>
-                                    <option value="SB-San Jose">SB-San Jose</option>
-                                    <option value="SB-Santa Clara">SB-Santa Clara</option>
-                                    <option value="SB-Saratoga">SB-Saratoga</option>
-                                    <option value="SB-Sierramont">SB-Sierramont</option>
-                                    <option value="SB-Sunnyvale">SB-Sunnyvale</option>
-                                    <option value="SB-Sunol">SB-Sunol</option>
-                                    <option value="SB-Sweigert">SB-Sweigert</option>
-                                    <option value="SB-Willow Glen">SB-Willow Glen</option>
-                                    <option value="SF-Balboa Terrace">SF-Balboa Terrace</option>
-                                    <option value="SF-Bayshore">SF-Bayshore</option>
-                                    <option value="SF-Bayview">SF-Bayview</option>
-                                    <option value="SF-Bernal Heights">SF-Bernal Heights</option>
-                                    <option value="SF-Brisbane">SF-Brisbane</option>
-                                    <option value="SF-Broadmoor">SF-Broadmoor</option>
-                                    <option value="SF-Burlingame">SF-Burlingame</option>
-                                    <option value="SF-Castro">SF-Castro</option>
-                                    <option value="SF-Chinatown">SF-Chinatown</option>
-                                    <option value="SF-Colma">SF-Colma</option>
-                                    <option value="SF-Cow Hollow">SF-Cow Hollow</option>
-                                    <option value="SF-Crocker">SF-Crocker</option>
-                                    <option value="SF-Crocker Amazon">SF-Crocker Amazon</option>
-                                    <option value="SF-Daly City">SF-Daly City</option>
-                                    <option value="SF-Downtown">SF-Downtown</option>
-                                    <option value="SF-Excelsior">SF-Excelsior</option>
-                                    <option value="SF-Financial District">SF-Financial District</option>
-                                    <option value="SF-Glen Park">SF-Glen Park</option>
-                                    <option value="SF-Haight-Ashbury">SF-Haight-Ashbury</option>
-                                    <option value="SF-Hayes Valley">SF-Hayes Valley</option>
-                                    <option value="SF-Hillside">SF-Hillside</option>
-                                    <option value="SF-Hunter's Point">SF-Hunter's Point</option>
-                                    <option value="SF-Ingleside">SF-Ingleside</option>
-                                    <option value="SF-Marina">SF-Marina</option>
-                                    <option value="SF-Merced">SF-Merced</option>
-                                    <option value="SF-Mission Bay">SF-Mission Bay</option>
-                                    <option value="SF-Mission District">SF-Mission District</option>
-                                    <option value="SF-Nob Hill">SF-Nob Hill</option>
-                                    <option value="SF-Noe Valley">SF-Noe Valley</option>
-                                    <option value="SF-North Beach">SF-North Beach</option>
-                                    <option value="SF-Oceanview">SF-Oceanview</option>
-                                    <option value="SF-Outer Richmond">SF-Outer Richmond</option>
-                                    <option value="SF-Pacific Heights">SF-Pacific Heights</option>
-                                    <option value="SF-Pacifica">SF-Pacifica</option>
-                                    <option value="SF-Peninsula">SF-Peninsula</option>
-                                    <option value="SF-Portola">SF-Portola</option>
-                                    <option value="SF-Potrero Hill">SF-Potrero Hill</option>
-                                    <option value="SF-Presidio">SF-Presidio</option>
-                                    <option value="SF-Richmond">SF-Richmond</option>
-                                    <option value="SF-Russian Hill">SF-Russian Hill</option>
-                                    <option value="SF-San Mateo">SF-San Mateo</option>
-                                    <option value="SF-Soma">SF-Soma</option>
-                                    <option value="SF-South San Francisco">SF-South San Francisco</option>
-                                    <option value="SF-Southeast">SF-Southeast</option>
-                                    <option value="SF-St. Francis">SF-St. Francis</option>
-                                    <option value="SF-Sunset">SF-Sunset</option>
-                                    <option value="SF-Tenderloin">SF-Tenderloin</option>
-                                    <option value="SF-Twin Peaks">SF-Twin Peaks</option>
-                                    <option value="SF-Visitacion Valley">SF-Visitacion Valley</option>
-                                    <option value="SF-Western Addition">SF-Western Addition</option>
-                                </select>
-                                <p class="input-help">(EB=East Bay; SF=San Francisco; SB=South Bay)</p>
-                            </div>
-
-                            <div class="rtv-form-group">
-                                <label for="00Nj0000002TXZc">Other Neighborhood</label>
-                                <input id="00Nj0000002TXZc" maxlength="200" name="00Nj0000002TXZc" type="text" />
-                                <p class="input-help">(Please write the name of your home neighborhood if it is not listed above.)</p>
-                            </div>
-
-                            <h3>How Can We Contact You?</h3>
-
-                            <div class="rtv-form-group">
-                                <label for="phone">phone</label>
-                                <input id="phone" maxlength="40" name="phone" type="tel" autocomplete="mobile" />
-                            </div>
-
-                            <div class="rtv-form-group">
-                                <label for="email">email address</label>
-                                <input id="email" maxlength="80" name="email" type="email" autocomplete="email" required />
-                            </div>
-
-                            <div class="rtv-form-group">
-                                <label for="00Nj0000002TVTA">Emergency Contact</label>
-                                <input id="00Nj0000002TVTA" maxlength="200" name="00Nj0000002TVTA" size="20" type="text" />
-                                <p class="input-help">(Please include the Emergency Contact's name and relationship to you.)</p>
-                            </div>
-
-                            <div class="rtv-form-group">
-                                <label for="00Nj0000002TVXS">Emergency Contact Phone Number</label>
-                                <input id="00Nj0000002TVXS" maxlength="40" name="00Nj0000002TVXS" type="tel" />
+                                <div class="rtv-form-group">
+                                    <label for="00Nj0000002TVXS">Emergency Contact Phone Number</label>
+                                    <input id="00Nj0000002TVXS" maxlength="40" name="00Nj0000002TVXS" type="tel" />
+                                </div>
                             </div>
 
                         </fieldset>
+                        <div class="tab-content-footer">
+                            <a class="directional-link" href="#personal-info">Next</a>
+                        </div>
                     </div>
 
                     <div class="tab-content" id="personal-info">
                         <fieldset class="tabbed-fieldset">
-                        <h2>PERSONAL INFORMATION</h2>
+                            <div class="grid-group">
+                                <div class="rtv-form-group">
+                                    <label for="00Nj0000002TXLX">Languages Spoken Fluently</label>
+                                    <select  id="00Nj0000002TXLX" multiple="multiple" name="00Nj0000002TXLX"
+                                        title="Native Language or Spoken Fluently">
+                                        <option value="English">English</option>
+                                        <option value="Chinese (Mandarin)">Chinese (Mandarin)</option>
+                                        <option value="Chinese (Cantonese)">Chinese (Cantonese)</option>
+                                        <option value="Spanish">Spanish</option>
+                                        <option value="Afrikaans">Afrikaans</option>
+                                        <option value="Albanian">Albanian</option>
+                                        <option value="Amharic">Amharic</option>
+                                        <option value="Arabic">Arabic</option>
+                                        <option value="Armenian">Armenian</option>
+                                        <option value="Assyrian">Assyrian</option>
+                                        <option value="Azerbaijani">Azerbaijani</option>
+                                        <option value="Basque">Basque</option>
+                                        <option value="Belarusian">Belarusian</option>
+                                        <option value="Bengali">Bengali</option>
+                                        <option value="Bosnian">Bosnian</option>
+                                        <option value="Bulgarian">Bulgarian</option>
+                                        <option value="Catalan">Catalan</option>
+                                        <option value="Cebuano">Cebuano</option>
+                                        <option value="Chichewa">Chichewa</option>
+                                        <option value="Chinese">Chinese</option>
+                                        <option value="Croatian">Croatian</option>
+                                        <option value="Czech">Czech</option>
+                                        <option value="Danish">Danish</option>
+                                        <option value="Dari">Dari</option>
+                                        <option value="Dutch">Dutch</option>
+                                        <option value="Estonian">Estonian</option>
+                                        <option value="Farsi">Farsi</option>
+                                        <option value="Finnish">Finnish</option>
+                                        <option value="French">French</option>
+                                        <option value="Galician">Galician</option>
+                                        <option value="Georgian">Georgian</option>
+                                        <option value="German">German</option>
+                                        <option value="Greek">Greek</option>
+                                        <option value="Gujarati">Gujarati</option>
+                                        <option value="Haitian Creole">Haitian Creole</option>
+                                        <option value="Hausa">Hausa</option>
+                                        <option value="Hebrew">Hebrew</option>
+                                        <option value="Hindi">Hindi</option>
+                                        <option value="Hmong">Hmong</option>
+                                        <option value="Hungarian">Hungarian</option>
+                                        <option value="Icelandic">Icelandic</option>
+                                        <option value="Igbo">Igbo</option>
+                                        <option value="Ilocano">Ilocano</option>
+                                        <option value="Indonesian">Indonesian</option>
+                                        <option value="Irish">Irish</option>
+                                        <option value="Italian">Italian</option>
+                                        <option value="Iu Mien">Iu Mien</option>
+                                        <option value="Japanese">Japanese</option>
+                                        <option value="Javanese">Javanese</option>
+                                        <option value="Kannada">Kannada</option>
+                                        <option value="Kazakh">Kazakh</option>
+                                        <option value="Khmer">Khmer</option>
+                                        <option value="Kinyarwanda">Kinyarwanda</option>
+                                        <option value="Kirundi">Kirundi</option>
+                                        <option value="Korean">Korean</option>
+                                        <option value="Lao">Lao</option>
+                                        <option value="Latvian">Latvian</option>
+                                        <option value="Lithuanian">Lithuanian</option>
+                                        <option value="Luo">Luo</option>
+                                        <option value="Macedonian">Macedonian</option>
+                                        <option value="Malagasy">Malagasy</option>
+                                        <option value="Malay">Malay</option>
+                                        <option value="Malayalam">Malayalam</option>
+                                        <option value="Maltese">Maltese</option>
+                                        <option value="Maori">Maori</option>
+                                        <option value="Marathi">Marathi</option>
+                                        <option value="Mongolian">Mongolian</option>
+                                        <option value="Myanmar (Burmese)">Myanmar (Burmese)</option>
+                                        <option value="Nepali">Nepali</option>
+                                        <option value="Norwegian">Norwegian</option>
+                                        <option value="OTHER">OTHER</option>
+                                        <option value="Pashto">Pashto</option>
+                                        <option value="Polish">Polish</option>
+                                        <option value="Portuguese">Portuguese</option>
+                                        <option value="Punjabi">Punjabi</option>
+                                        <option value="Romanian">Romanian</option>
+                                        <option value="Russian">Russian</option>
+                                        <option value="Serbian">Serbian</option>
+                                        <option value="Serbo-Croatian">Serbo-Croatian</option>
+                                        <option value="Sesotho">Sesotho</option>
+                                        <option value="Shona">Shona</option>
+                                        <option value="Sinhala">Sinhala</option>
+                                        <option value="Slovak">Slovak</option>
+                                        <option value="Slovenian">Slovenian</option>
+                                        <option value="Somali">Somali</option>
+                                        <option value="Sundanese">Sundanese</option>
+                                        <option value="Swahili">Swahili</option>
+                                        <option value="Swedish">Swedish</option>
+                                        <option value="Tagalog">Tagalog</option>
+                                        <option value="Tajik">Tajik</option>
+                                        <option value="Tamil">Tamil</option>
+                                        <option value="Telugu">Telugu</option>
+                                        <option value="Teochiu">Teochiu</option>
+                                        <option value="Thai">Thai</option>
+                                        <option value="Tibetan">Tibetan</option>
+                                        <option value="Turkish">Turkish</option>
+                                        <option value="Twi">Twi</option>
+                                        <option value="Ukrainian">Ukrainian</option>
+                                        <option value="Urdu">Urdu</option>
+                                        <option value="Uzbek">Uzbek</option>
+                                        <option value="Vietnamese">Vietnamese</option>
+                                        <option value="Welsh">Welsh</option>
+                                        <option value="Yiddish">Yiddish</option>
+                                        <option value="Yoruba">Yoruba</option>
+                                        <option value="Zulu">Zulu</option>
+                                    </select>
+                                    <p class="input-help">(Please press Ctrl on Windows or Command on MacOS and click if choosing more than one
+                                        option)</p>
+                                </div>
 
-                        <div class="rtv-form-group">
-                            <label class="checkbox-label" for="00N0a00000BpoVf">Are you at least 18 years of age?</label>
-                            <input id="00N0a00000BpoVf" name="00N0a00000BpoVf" type="checkbox" value="1" />
-                        </div>
+                                <div class="rtv-form-group">
+                                    <label for="00Nj0000002TXZS">Other Languages</label>
+                                    <input id="00Nj0000002TXZS" maxlength="200" name="00Nj0000002TXZS" type="text" />
+                                </div>
 
-                        <div class="rtv-form-group">
-                            <label for="00Nj0000002TXLX">Languages Spoken Fluently</label>
-                            <select  id="00Nj0000002TXLX" multiple="multiple" name="00Nj0000002TXLX"
-                                title="Native Language or Spoken Fluently">
-                                <option value="English">English</option>
-                                <option value="Chinese (Mandarin)">Chinese (Mandarin)</option>
-                                <option value="Chinese (Cantonese)">Chinese (Cantonese)</option>
-                                <option value="Spanish">Spanish</option>
-                                <option value="Afrikaans">Afrikaans</option>
-                                <option value="Albanian">Albanian</option>
-                                <option value="Amharic">Amharic</option>
-                                <option value="Arabic">Arabic</option>
-                                <option value="Armenian">Armenian</option>
-                                <option value="Assyrian">Assyrian</option>
-                                <option value="Azerbaijani">Azerbaijani</option>
-                                <option value="Basque">Basque</option>
-                                <option value="Belarusian">Belarusian</option>
-                                <option value="Bengali">Bengali</option>
-                                <option value="Bosnian">Bosnian</option>
-                                <option value="Bulgarian">Bulgarian</option>
-                                <option value="Catalan">Catalan</option>
-                                <option value="Cebuano">Cebuano</option>
-                                <option value="Chichewa">Chichewa</option>
-                                <option value="Chinese">Chinese</option>
-                                <option value="Croatian">Croatian</option>
-                                <option value="Czech">Czech</option>
-                                <option value="Danish">Danish</option>
-                                <option value="Dari">Dari</option>
-                                <option value="Dutch">Dutch</option>
-                                <option value="Estonian">Estonian</option>
-                                <option value="Farsi">Farsi</option>
-                                <option value="Finnish">Finnish</option>
-                                <option value="French">French</option>
-                                <option value="Galician">Galician</option>
-                                <option value="Georgian">Georgian</option>
-                                <option value="German">German</option>
-                                <option value="Greek">Greek</option>
-                                <option value="Gujarati">Gujarati</option>
-                                <option value="Haitian Creole">Haitian Creole</option>
-                                <option value="Hausa">Hausa</option>
-                                <option value="Hebrew">Hebrew</option>
-                                <option value="Hindi">Hindi</option>
-                                <option value="Hmong">Hmong</option>
-                                <option value="Hungarian">Hungarian</option>
-                                <option value="Icelandic">Icelandic</option>
-                                <option value="Igbo">Igbo</option>
-                                <option value="Ilocano">Ilocano</option>
-                                <option value="Indonesian">Indonesian</option>
-                                <option value="Irish">Irish</option>
-                                <option value="Italian">Italian</option>
-                                <option value="Iu Mien">Iu Mien</option>
-                                <option value="Japanese">Japanese</option>
-                                <option value="Javanese">Javanese</option>
-                                <option value="Kannada">Kannada</option>
-                                <option value="Kazakh">Kazakh</option>
-                                <option value="Khmer">Khmer</option>
-                                <option value="Kinyarwanda">Kinyarwanda</option>
-                                <option value="Kirundi">Kirundi</option>
-                                <option value="Korean">Korean</option>
-                                <option value="Lao">Lao</option>
-                                <option value="Latvian">Latvian</option>
-                                <option value="Lithuanian">Lithuanian</option>
-                                <option value="Luo">Luo</option>
-                                <option value="Macedonian">Macedonian</option>
-                                <option value="Malagasy">Malagasy</option>
-                                <option value="Malay">Malay</option>
-                                <option value="Malayalam">Malayalam</option>
-                                <option value="Maltese">Maltese</option>
-                                <option value="Maori">Maori</option>
-                                <option value="Marathi">Marathi</option>
-                                <option value="Mongolian">Mongolian</option>
-                                <option value="Myanmar (Burmese)">Myanmar (Burmese)</option>
-                                <option value="Nepali">Nepali</option>
-                                <option value="Norwegian">Norwegian</option>
-                                <option value="OTHER">OTHER</option>
-                                <option value="Pashto">Pashto</option>
-                                <option value="Polish">Polish</option>
-                                <option value="Portuguese">Portuguese</option>
-                                <option value="Punjabi">Punjabi</option>
-                                <option value="Romanian">Romanian</option>
-                                <option value="Russian">Russian</option>
-                                <option value="Serbian">Serbian</option>
-                                <option value="Serbo-Croatian">Serbo-Croatian</option>
-                                <option value="Sesotho">Sesotho</option>
-                                <option value="Shona">Shona</option>
-                                <option value="Sinhala">Sinhala</option>
-                                <option value="Slovak">Slovak</option>
-                                <option value="Slovenian">Slovenian</option>
-                                <option value="Somali">Somali</option>
-                                <option value="Sundanese">Sundanese</option>
-                                <option value="Swahili">Swahili</option>
-                                <option value="Swedish">Swedish</option>
-                                <option value="Tagalog">Tagalog</option>
-                                <option value="Tajik">Tajik</option>
-                                <option value="Tamil">Tamil</option>
-                                <option value="Telugu">Telugu</option>
-                                <option value="Teochiu">Teochiu</option>
-                                <option value="Thai">Thai</option>
-                                <option value="Tibetan">Tibetan</option>
-                                <option value="Turkish">Turkish</option>
-                                <option value="Twi">Twi</option>
-                                <option value="Ukrainian">Ukrainian</option>
-                                <option value="Urdu">Urdu</option>
-                                <option value="Uzbek">Uzbek</option>
-                                <option value="Vietnamese">Vietnamese</option>
-                                <option value="Welsh">Welsh</option>
-                                <option value="Yiddish">Yiddish</option>
-                                <option value="Yoruba">Yoruba</option>
-                                <option value="Zulu">Zulu</option>
-                            </select>
-                            <p class="input-help">(Please press Ctrl on Windows or Command on MacOS and click if choosing more than one
-                                option)</p>
-                        </div>
+                                <div class="rtv-form-group first-two-columns">
+                                    <label for="00Nj0000002TZHi">Special Skills</label>
+                                    <textarea id="00Nj0000002TZHi" cols="20" rows="3" name="00Nj0000002TZHi" placeholder="(examples, fundraising experience, website/computer skills, translation abilities)"></textarea>
+                                </div>
 
-                        <div class="rtv-form-group">
-                            <label for="00Nj0000002TXZS">Other Languages</label>
-                            <input id="00Nj0000002TXZS" maxlength="200" name="00Nj0000002TXZS" type="text" />
-                        </div>
-
-                        <div class="rtv-form-group">
-                            <label for="00Nj0000002TZHi">Special Skills</label>
-                            <p>Do you have any special skills you would like to share with RIT?</p>
-                            <textarea id="00Nj0000002TZHi" cols="20" rows="3" name="00Nj0000002TZHi"></textarea>
-                            <p class="input-help">(e.g. fundraising experience, website/computer skills, translation abilities)</p>
-                        </div>
+                                <div class="rtv-form-group">
+                                    <input id="00N0a00000BpoVf" name="00N0a00000BpoVf" type="checkbox" value="1" />
+                                    <label class="checkbox-label" for="00N0a00000BpoVf">Are you at least 18 years of age?</label>
+                                </div>
+                            </div>
                         </fieldset>
+                        <div class="tab-content-footer">
+                            <a class="directional-link" href="#work-info">Next</a>
+                        </div>
                     </div>
 
                     <div class="tab-content" id="work-info">
                         <fieldset class="tabbed-fieldset">
-                        <h2>EMPLOYMENT INFORMATION</h2>
 
                         <div class="rtv-form-group">
                             <label for="00Nj0000002TVbz">Employment Status</label>
@@ -444,11 +475,13 @@
                             <input id="00Nj0000002TXUl" name="00Nj0000002TXUl" type="checkbox" value="1" />
                         </div>
                         </fieldset>
+                        <div class="tab-content-footer">
+                            <a class="directional-link" href="#education-info">Next</a>
+                        </div>
                     </div>
 
                     <div class="tab-content" id="education-info">
                         <fieldset class="tabbed-fieldset">
-                        <h2>EDUCATION INFORMATION</h2>
 
                         <div class="rtv-form-group">
                             <label for="00Nj0000002TWI9">Highest Education Level</label>
@@ -519,11 +552,13 @@
                             <p class="input-help">(Please enter any other schooling.)</p>
                         </div>
                         </fieldset>
+                        <div class="tab-content-footer">
+                            <a class="directional-link" href="#volunteer-preferences">Next</a>
+                        </div>
                     </div>
 
                     <div class="tab-content" id="volunteer-preferences">
                         <fieldset class="tabbed-fieldset">
-                        <h2>VOLUNTEERING PREFERENCES</h2>
 
                         <p>
                             Although we may not be able to accommodate all of your preferences, your preference profile will help us
@@ -768,11 +803,13 @@
                             <input id="00Nj0000002TXZs" name="00Nj0000002TXZs" type="checkbox" value="1" />
                         </div>
                         </fieldset>
+                        <div class="tab-content-footer">
+                            <a class="directional-link" href="#references">Next</a>
+                        </div>
                     </div>
 
                     <div class="tab-content" id="references">
                         <fieldset class="tabbed-fieldset">
-                        <h2>REFERENCES</h2>
 
                         <p>
                             Please provide the name and contact information for two references. If you are unable to do so at this time,
@@ -834,11 +871,12 @@
                             <input id="00Nj0000002TZD7" maxlength="40" name="00Nj0000002TZD7" type="tel" autocomplete="none" />
                         </div>
                         </fieldset>
+                        <div class="tab-content-footer">
+                            <a class="directional-link" href="#volunteer-agreement">Next</a>
+                        </div>
                     </div>
-
-                    <div class="tab-content" id="volunteer-agreement">
+                    <div class="tab-content" id="volunteer-agreement" aria-labelledby="">
                         <fieldset class="tabbed-fieldset">
-                            <h2>VOLUNTEER AGREEMENT</h2>
 
                             <p>
                                 Your signature is your "legally-binding contract" to Refugee & Immigrant Transitions that all the
@@ -899,19 +937,19 @@
                                 <input id="00Nj0000002TXZh" maxlength="200" name="00Nj0000002TXZh" type="text" />
                             </div>
                         </fieldset>
+                        <div class="tab-content-footer">
+                            <div class="submit-button">
+                                <button name="submit" type="submit">Submit Application</button>
+                            </div>
+
+                            <input name="oid" type="hidden" value="00Dj0000000Ir12" />
+                            <input name="retURL" type="hidden" value="http://www.reftrans.org/application-response/" />
+
+                            <!-- Set value="1" to debug form fields -->
+                            <input type="hidden" name="debug" value="0" />
+                        </div>
                     </div>
                 </div>
-                <footer>
-                    <div class="submit-button">
-                        <button name="submit" type="submit">Submit Application</button>
-                    </div>
-
-                    <input name="oid" type="hidden" value="00Dj0000000Ir12" />
-                    <input name="retURL" type="hidden" value="http://www.reftrans.org/application-response/" />
-
-                    <!-- Set value="1" to debug form fields -->
-                    <input type="hidden" name="debug" value="0" />
-                </footer>
             </form>
         </div>
 </main>
