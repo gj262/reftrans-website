@@ -1,18 +1,43 @@
-const tabs = document.querySelectorAll('.tablink');
+const tabs = document.querySelectorAll('.tab');
 const contentSections = document.querySelectorAll('.tab-content');
-
-console.log({ tabs });
+const directionalLinks = document.querySelectorAll('.directional-link');
 
 tabs.forEach((tab) => {
     tab.addEventListener('click', function(e) {
+        e.preventDefault();
+
         hideTabContent();
 
-        const selectedTabContent = document.getElementById(tab.dataset.tabTarget);
+        const href = e.target.hash || e.target.children[0].hash; // OR condition allows for click in padding area
+        if (href) {
+            const id = href.slice(1); // remove hash # symbol
+            const selectedTabContent = document.getElementById(id);
 
-        this.classList.add('active-tab');
-        showTabContent(selectedTabContent);
+            this.classList.add('active-tab');
+            showTabContent(selectedTabContent);
+        }
     })
 })
+
+directionalLinks.forEach((link) => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    hideTabContent();
+
+    const href = e.target.hash;
+
+    const selectedTab = Array.from(tabs).find((tab) => {
+      const link = tab.querySelector('.tablink');
+      return link.hash === href;
+    });
+    selectedTab.classList.add('active-tab');
+
+    const id = href.slice(1); // remove hash # symbol
+    const selectedTabContent = document.getElementById(id);
+    showTabContent(selectedTabContent);
+  });
+});
 
 // hide all but the first tab on load
 hideTabContent();
