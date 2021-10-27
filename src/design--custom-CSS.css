@@ -1,0 +1,207 @@
+
+/* Contents of Squarespace: Home --> Design --> Custom CSS */
+
+.quote-block blockquote {
+  color: #006699;
+}
+
+.quote-block .source {
+  color: #006699;
+}
+
+/* make blog pages full width */
+
+.entry > .entry-content {
+  margin-right: 0px;
+  border-right: none;
+}
+
+img.summary-thumbnail-image.loaded:hover {
+  opacity: 0.5;
+}
+.details {
+  display: none;
+}
+nav.pagination {
+  display: none;
+}
+#fpholder {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+#side {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#img-responsive {
+  width: 33;
+  height: 183px;
+}
+
+#give {
+  display: block;
+  background: url("http://i.imgur.com/KC5b77G.jpg") no-repeat 0 0;
+  max-width: 100%;
+  height: auto;
+  padding-left: 25px;
+}
+
+#give:hover {
+  background: url("http://i.imgur.com/w9jP5qt.jpg") no-repeat 0 0;
+  color: #fc8106;
+  max-width: 100%;
+  height: auto;
+}
+
+#volunteer {
+  display: block;
+  background: url("http://i.imgur.com/yLo8nsV.jpg") no-repeat 0 0;
+  max-width: 100%;
+  height: auto;
+}
+
+#volunteer:hover {
+  background: url("http://i.imgur.com/uoJSqBh.jpg") no-repeat 0 0;
+}
+
+#learn {
+  display: block;
+  background: url("http://i.imgur.com/af5QJmJ.jpg") no-repeat 0 0;
+  max-width: 100%;
+  height: auto;
+}
+
+#learn:hover {
+  background: url("http://i.imgur.com/VfmG2FQ.jpg") no-repeat 0 0;
+}
+
+#give2 {
+  display: block;
+  background: url("http://i.imgur.com/iG4z1ZM.jpg") no-repeat 0 0;
+  max-width: 100%;
+  height: auto;
+}
+
+#give2:hover {
+  background: url("http://i.imgur.com/AX6Dd1s.jpg") no-repeat 0 0;
+  color: #fc8106;
+  max-width: 100%;
+  height: auto;
+}
+
+#volunteer2 {
+  display: block;
+  background: url("http://i.imgur.com/UUTyt0T.jpg") no-repeat 0 0;
+  max-width: 100%;
+  height: auto;
+}
+
+#volunteer2:hover {
+  background: url("http://i.imgur.com/UOPkNIB.jpg") no-repeat 0 0;
+}
+
+#learn2 {
+  display: block;
+  background: url("http://i.imgur.com/vpPFN2K.jpg") no-repeat 0 0;
+  max-width: 100%;
+  height: auto;
+}
+
+#learn2:hover {
+  background: url("http://i.imgur.com/rAcQoUb.jpg") no-repeat 0 0;
+}
+
+#sidegive {
+  display: block;
+  background: url("http://i.imgur.com/i1AOqVE.jpg") no-repeat 0 0;
+  width: 237px;
+  height: 73px;
+}
+
+#sidegive:hover {
+  background: url("http://i.imgur.com/5L1WMDB.jpg") no-repeat 0 0;
+  color: #fc8106;
+}
+
+#sidevolunteer {
+  display: block;
+  background: url("http://i.imgur.com/xJ0EFqt.jpg") no-repeat 0 0;
+  width: 237px;
+  height: 73px;
+}
+
+#sidevolunteer:hover {
+  background: url("http://i.imgur.com/D8YsJqa.jpg") no-repeat 0 0;
+}
+
+#sidelearn {
+  display: block;
+  background: url("http://i.imgur.com/3Y9f4QD.jpg") no-repeat 0 0;
+  width: 237px;
+  height: 73px;
+}
+
+#sidelearn:hover {
+  background: url("http://i.imgur.com/r2yz9Al.jpg") no-repeat 0 0;
+}
+
+#sideimpact {
+  display: block;
+  background: url("http://i.imgur.com/EMWFa0G.jpg") no-repeat 0 0;
+  width: 237px;
+  height: 73px;
+}
+
+#sideimpact:hover {
+  background: url("http://i.imgur.com/flzgfJo.jpg") no-repeat 0 0;
+}
+
+#leader {
+  display: block;
+  background: url("http://i.imgur.com/1yKAtw1.jpg") no-repeat 0 0;
+  width: 236px;
+  height: 236px;
+}
+
+#leader:hover {
+  background: url("http://i.imgur.com/piBtfi4.jpg") no-repeat 0 0;
+  color: #fc8106;
+}
+
+#family {
+  display: block;
+  background: url("http://i.imgur.com/3ZKXNCq.jpg") no-repeat 0 0;
+  width: 236px;
+  height: 236px;
+}
+
+#family:hover {
+  background: url("http://i.imgur.com/E5Seo01.jpg") no-repeat 0 0;
+}
+
+#mentor {
+  display: block;
+  background: url("http://i.imgur.com/DIgDSGA.jpg") no-repeat 0 0;
+  width: 236px;
+  height: 236px;
+}
+
+#mentor:hover {
+  background: url("http://i.imgur.com/PU8rgct.jpg") no-repeat 0 0;
+}
+
+#smalltext {
+  color: black;
+  font-size: 0.8em;
+}
+
+/* make the navigation /give always orange */
+#header .primary-nav .nav a[href="/give"]:link,
+#header .primary-nav .nav a[href="/give"]:visited {
+  color: #fd770b;
+}

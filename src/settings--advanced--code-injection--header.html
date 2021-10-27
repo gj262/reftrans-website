@@ -1,0 +1,141 @@
+<!-- Contents of Squarespace: Settings - Advanced - Code Injection - Header -->
+
+<!-- This code injection turns "heading 2" and "heading 3" items into
+     links based on their content. These links can then be shared with others
+     to provide handy scroll to spots within pages.
+     questions? comments? gj262@yahoo.com -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  (function (document, history, location) {
+    var HISTORY_SUPPORT = !!(history && history.pushState);
+
+    var anchorScrolls = {
+      ANCHOR_REGEX: /^#[^ ]+$/,
+      OFFSET_HEIGHT_PX: 160,
+
+      /**
+       * Create anchor links for h2/h3 elements.
+       * Establish events, and fix initial scroll position if a hash is provided.
+       */
+      init: function () {
+        this.createHeadingAnchors();
+        this.scrollToCurrent();
+        $(window).on("hashchange", $.proxy(this, "scrollToCurrent"));
+        $("body").on("click", "a", $.proxy(this, "delegateAnchors"));
+      },
+
+      createHeadingAnchors: function () {
+        $("h2, h3").each(function (index) {
+          var subtext = $(this).text();
+          console.log(
+            "Found a header element as a potential link: " +
+              index +
+              ": " +
+              subtext
+          );
+
+          var ignoreStrings = ["EXPLORE MORE!", "San Francisco", "Oakland"];
+          for (var i = 0; i < ignoreStrings.length; i++) {
+            if (ignoreStrings[i] === subtext) {
+              console.log(
+                "\tNot adding a link because this is in the ignoreList"
+              );
+              return;
+            }
+          }
+
+          if (
+            $(this).parent() &&
+            $(this).parent().parent() &&
+            $(this).parent().parent().hasClass("html-block")
+          ) {
+            if (
+              this.nextSibling &&
+              (this.nextSibling.nodeName === "P" ||
+                this.nextSibling.nodeName === "UL")
+            ) {
+              console.log(
+                "\tAdding a link because this is in an html-block followed by a paragraph"
+              );
+              subtext = subtext.toLowerCase().replace(/\W+/g, "-");
+              $(this).attr("id", subtext);
+              $(this).wrapInner('<a href="#' + subtext + '"></a>');
+            } else {
+              console.log(
+                "\tNot adding a link because this is in an html-block but not followed by a paragraph"
+              );
+            }
+          } else {
+            console.log(
+              "\tNot adding a link link because this is is not in an html-block"
+            );
+          }
+        });
+      },
+
+      /**
+       * Return the offset amount to deduct from the normal scroll position.
+       * Modify as appropriate to allow for dynamic calculations
+       */
+      getFixedOffset: function () {
+        return this.OFFSET_HEIGHT_PX;
+      },
+
+      /**
+       * If the provided href is an anchor which resolves to an element on the
+       * page, scroll to it.
+       * @param  {String} href
+       * @return {Boolean} - Was the href an anchor.
+       */
+      scrollIfAnchor: function (href, pushToHistory) {
+        var match, anchorOffset;
+
+        if (!this.ANCHOR_REGEX.test(href)) {
+          return false;
+        }
+
+        match = document.getElementById(href.slice(1));
+
+        if (match) {
+          anchorOffset = $(match).offset().top - this.getFixedOffset();
+          console.log("scrolling to: " + anchorOffset);
+          $("html, body").animate({ scrollTop: anchorOffset });
+
+          // Add the state to history as-per normal anchor links
+          if (HISTORY_SUPPORT && pushToHistory) {
+            history.pushState({}, document.title, location.pathname + href);
+          }
+        }
+
+        return !!match;
+      },
+
+      /**
+       * Attempt to scroll to the current location's hash.
+       */
+      scrollToCurrent: function (e) {
+        if (this.scrollIfAnchor(window.location.hash) && e) {
+          e.preventDefault();
+        }
+      },
+
+      /**
+       * If the click event's target was an anchor, fix the scroll position.
+       */
+      delegateAnchors: function (e) {
+        var elem = e.target;
+        // Sometimes the anchor wraps a deep target. Go 2 back.
+        var href =
+          elem.getAttribute("href") ||
+          elem.parentElement.getAttribute("href") ||
+          elem.parentElement.parentElement.getAttribute("href");
+        if (this.scrollIfAnchor(href, true)) {
+          e.preventDefault();
+        }
+      },
+    };
+
+    $(document).ready($.proxy(anchorScrolls, "init"));
+  })(window.document, window.history, window.location);
+</script>
