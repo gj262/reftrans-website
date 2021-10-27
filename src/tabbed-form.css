@@ -1,0 +1,60 @@
+.rvf {
+  display: flex;
+  justify-content: center;
+}
+
+.rvf .tabs .tablink {
+  background-color: rgb(229, 229, 229);
+  color: rgb(92, 82, 75);
+  border: 0;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.tabbed-form {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  width: 90%;
+}
+
+.tabbed-fieldset {
+  border: 0;
+  margin: 0;
+  min-width: 0;
+  padding: 0.01em 0 0 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+}
+
+.tabs .active-tab {
+  display: inline-block;
+}
+
+.tab-content-panel {
+  background-color: rgb(132, 173, 208);
+  padding: 1rem;
+}
+
+.tablink {
+  flex: 1 1 10rem;
+}
+
+.tabs .tablink.active-tab {
+  background-color: rgb(132, 173, 208);
+  color: #fff;
+}
+
+.tab-content.inactive-tab {
+  display: none;
+}
+
+.tab-content.active-tab {
+  display: inline-block;
+}
