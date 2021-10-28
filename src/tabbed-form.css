@@ -69,6 +69,8 @@
 /* tab content area */
 .tab-content-panel {
   background-color: rgb(132, 173, 208);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
   padding: 1rem;
 }
 
@@ -80,6 +82,18 @@
 .tab-content-footer {
   display: flex;
   justify-content: flex-end;
+}
+
+.rvf .tab-content-footer .submit-button {
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+}
+
+.rvf .tab-content-footer .submit-button button {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
 }
 
 .tab-content.inactive-tab {
@@ -200,6 +214,14 @@
 
 #references .tabbed-fieldset .grid-group .quad-width {
   grid-area: span 1 / span 4;
+}
+#volunteer-agreement .tabbed-fieldset .grid-group {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .tabbed-fieldset .first-two-columns {
