@@ -824,7 +824,7 @@
 
                     <div class="tab-content" id="references">
                         <fieldset class="tabbed-fieldset">
-    
+
                             <p>
                                 Please provide the name and contact information for two references. If you are unable to do so at this time,
                                 please bring your reference information to
@@ -834,12 +834,12 @@
                             <h3>Reference #1</h3>
 
                             <div class="grid-group">
-                                <div class="rtv-form-group">
-                                    <label for="00Nj0000002TZ3y">Name</label>
+                                <div class="rtv-form-group double-width">
+                                    <label for="00Nj0000002TZ3y">Full Name</label>
                                     <input id="00Nj0000002TZ3y" maxlength="200" name="00Nj0000002TZ3y" type="text" autocomplete="none" />
                                 </div>
 
-                                <div class="rtv-form-group">
+                                <div class="rtv-form-group double-width">
                                     <label for="00Nj0000002TZ43">Organization</label>
                                     <input id="00Nj0000002TZ43" maxlength="200" name="00Nj0000002TZ43" type="text" autocomplete="none" />
                                 </div>
@@ -849,9 +849,9 @@
                                     <input id="00Nj0000002TYzm" maxlength="200" name="00Nj0000002TYzm" type="text" autocomplete="none" />
                                 </div>
 
-                                <div class="rtv-form-group first-two-columns">
+                                <div class="rtv-form-group quad-width">
                                     <label for="00Nj0000002TYzg">Address</label>
-                                    <textarea id="00Nj0000002TYzg" cols="20" rows="2" name="00Nj0000002TYzg" autocomplete="none"></textarea>
+                                    <input id="00Nj0000002TYzg" maxlength="200" name="00Nj0000002TYzg" type="text" autocomplete="none" />
                                 </div>
 
                                 <div class="rtv-form-group">
@@ -863,12 +863,12 @@
                             <h3>Reference #2</h3>
 
                             <div class="grid-group">
-                                <div class="rtv-form-group">
-                                    <label for="00Nj0000002TZ8p">Name</label>
+                                <div class="rtv-form-group double-width">
+                                    <label for="00Nj0000002TZ8p">Full Name</label>
                                     <input id="00Nj0000002TZ8p" maxlength="200" name="00Nj0000002TZ8p" type="text" autocomplete="none" />
                                 </div>
 
-                                <div class="rtv-form-group">
+                                <div class="rtv-form-group double-width">
                                     <label for="00Nj0000002TZD2">Organization</label>
                                     <input id="00Nj0000002TZD2" maxlength="200" name="00Nj0000002TZD2" type="text" autocomplete="none" />
                                 </div>
@@ -878,9 +878,9 @@
                                     <input id="00Nj0000002TZDH" maxlength="200" name="00Nj0000002TZDH" type="text" autocomplete="none" />
                                 </div>
 
-                                <div class="rtv-form-group first-two-columns">
+                               <div class="rtv-form-group quad-width">
                                     <label for="00Nj0000002TZ8k">Address</label>
-                                    <textarea id="00Nj0000002TZ8k" cols="20" rows="2" name="00Nj0000002TZ8k" autocomplete="none"></textarea>
+                                    <input id="00Nj0000002TZ8k" maxlength="200" name="00Nj0000002TZ8k" type="text" autocomplete="none" />
                                 </div>
 
                                 <div class="rtv-form-group">
@@ -923,38 +923,43 @@
                                 </li>
                             </ul>
 
-                            <p><strong>I have read and agree to the terms stated above.</strong></p>
-
-                            <div class="rtv-form-group">
-                                <label for="00Nj0000002TZHs">Volunteer Signature</label>
-                                <input id="00Nj0000002TZHs" maxlength="200" name="00Nj0000002TZHs" type="text" />
-                                <p class="input-help">(Please type your name.)</p>
+                            <div class="rtv-form-group flex">
+                                <input id="putRealFieldIDhere" name="putRealFieldIDhere" type="checkbox" value="1" />
+                                <label class="checkbox-label" for="putRealFieldIDhere">I have read and agree to the terms stated above.</label>
                             </div>
 
-                            <div class="rtv-form-group">
-                                <label for="00Nj0000002TZFc">How did you hear about Refugee & Immigrant Transitions?</label>
-                                <select id="00Nj0000002TZFc" title="Referral Source" multiple="multiple" name="00Nj0000002TZFc">
-                                    <option value="Website">Website</option>
-                                    <option value="Online Posting">Online Posting</option>
-                                    <option value="Employer">Employer</option>
-                                    <option value="TV/Radio">TV/Radio</option>
-                                    <option value="Friend">Friend</option>
-                                    <option value="Newspaper">Newspaper</option>
-                                    <option value="Volunteer Center">Volunteer Center</option>
-                                    <option value="Peace Corp">Peace Corp</option>
-                                    <option value="Library/Project Read">Library/Project Read</option>
-                                    <option value="Universities/Schools">Universities/Schools</option>
-                                    <option value="Other">Other</option>
-                                    <option value="RT Staff/Volunteer/Board Member">RIT Staff/Volunteer/Board Member</option>
-                                    <option value="Flier">Flier</option>
-                                </select>
-                                <p class="input-help">(Please select all that apply. Press Ctrl on Windows or Command on MacOS and click if
-                                    choosing more than one option.)</p>
-                            </div>
+                            <div class="grid-group">
+                                <div class="rtv-form-group">
+                                    <label for="00Nj0000002TZHs">Volunteer Signature</label>
+                                    <input id="00Nj0000002TZHs" maxlength="200" name="00Nj0000002TZHs" type="text" />
+                                    <p class="input-help">(Please type your name.)</p>
+                                </div>
 
-                            <div class="rtv-form-group">
-                                <label for="00Nj0000002TXZh">If you were referred to RIT by another source, please specify.</label>
-                                <input id="00Nj0000002TXZh" maxlength="200" name="00Nj0000002TXZh" type="text" />
+                                <div class="rtv-form-group">
+                                    <label for="00Nj0000002TZFc">How did you hear about Refugee & Immigrant Transitions?</label>
+                                    <select id="00Nj0000002TZFc" title="Referral Source" multiple="multiple" name="00Nj0000002TZFc">
+                                        <option value="Website">Website</option>
+                                        <option value="Online Posting">Online Posting</option>
+                                        <option value="Employer">Employer</option>
+                                        <option value="TV/Radio">TV/Radio</option>
+                                        <option value="Friend">Friend</option>
+                                        <option value="Newspaper">Newspaper</option>
+                                        <option value="Volunteer Center">Volunteer Center</option>
+                                        <option value="Peace Corp">Peace Corp</option>
+                                        <option value="Library/Project Read">Library/Project Read</option>
+                                        <option value="Universities/Schools">Universities/Schools</option>
+                                        <option value="Other">Other</option>
+                                        <option value="RT Staff/Volunteer/Board Member">RIT Staff/Volunteer/Board Member</option>
+                                        <option value="Flier">Flier</option>
+                                    </select>
+                                    <p class="input-help">(Please select all that apply. Press Ctrl on Windows or Command on MacOS and click if
+                                        choosing more than one option.)</p>
+                                </div>
+
+                                <div class="rtv-form-group">
+                                    <label for="00Nj0000002TXZh">If you were referred to RIT by another source, please specify.</label>
+                                    <input id="00Nj0000002TXZh" maxlength="200" name="00Nj0000002TXZh" type="text" />
+                                </div>
                             </div>
                         </fieldset>
                         <div class="tab-content-footer">

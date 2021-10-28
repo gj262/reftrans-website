@@ -6,6 +6,7 @@
 .tabbed-form {
   display: flex;
   flex-direction: column;
+  font-family: Monserrat, Arial, Helvetica, sans-serif;
   min-width: 320px;
   width: 90%;
 }
@@ -68,6 +69,8 @@
 /* tab content area */
 .tab-content-panel {
   background-color: rgb(132, 173, 208);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
   padding: 1rem;
 }
 
@@ -79,6 +82,18 @@
 .tab-content-footer {
   display: flex;
   justify-content: flex-end;
+}
+
+.rvf .tab-content-footer .submit-button {
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+}
+
+.rvf .tab-content-footer .submit-button button {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
 }
 
 .tab-content.inactive-tab {
@@ -122,8 +137,7 @@
 }
 
 /* grids for form panels */
-#contact-info .tabbed-fieldset .grid-group, 
-#references .tabbed-fieldset .grid-group {
+#contact-info .tabbed-fieldset .grid-group {
   border-bottom: 1px solid #333;
   display: grid;
   grid-gap: 1rem;
@@ -184,6 +198,30 @@
 
 #volunteer-preferences .tabbed-fieldset .grid-group .wide-last {
   grid-column: 3 / 5;
+}
+
+#references .tabbed-fieldset .grid-group {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+#references .tabbed-fieldset .grid-group .double-width {
+  grid-area: span 1 / span 2;
+}
+
+#references .tabbed-fieldset .grid-group .quad-width {
+  grid-area: span 1 / span 4;
+}
+#volunteer-agreement .tabbed-fieldset .grid-group {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .tabbed-fieldset .first-two-columns {
