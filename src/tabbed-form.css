@@ -103,11 +103,20 @@
 
 .tabbed-fieldset label {
   color: #fff;
+}
+
+.rvf .tabbed-fieldset h3 {
+  color: #000;
+}
+
+.tabbed-fieldset label,
+.rvf .tabbed-fieldset h3 {
   font-family: Monserrat, Arial, Helvetica, sans-serif;
 }
 
 /* grids for form panels */
-#contact-info .tabbed-fieldset .grid-group {
+#contact-info .tabbed-fieldset .grid-group, 
+#references .tabbed-fieldset .grid-group {
   border-bottom: 1px solid #333;
   display: grid;
   grid-gap: 1rem;
