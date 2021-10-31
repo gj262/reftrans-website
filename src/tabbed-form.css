@@ -6,7 +6,8 @@
 .tabbed-form {
   display: flex;
   flex-direction: column;
-  font-family: Monserrat, Arial, Helvetica, sans-serif;
+  font-family: Lora, 'Times New Roman', Times, serif;
+  font-size: 18px;
   min-width: 320px;
   width: 90%;
 }
@@ -126,14 +127,14 @@
 
 .tabbed-fieldset label,
 .rvf .tabbed-fieldset h3 {
-  font-family: Monserrat, Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-family: Lora, 'Times New Roman', Times, serif;
+  font-size: 18px;
   font-weight: 400 !important;
 }
 
 .input-help {
   color: #fff;
-  font-family: Monserrat, Arial, Helvetica, sans-serif;
+  font-family: Lora, 'Times New Roman', Times, serif;
 }
 
 /* grids for form panels */
@@ -241,6 +242,7 @@
 .tabbed-fieldset .rtv-form-group select,
 .tabbed-fieldset .rtv-form-group textarea {
   background-color: #fff !important;
+  font-size: 18px;
   max-width: 100% !important;
 }
 
