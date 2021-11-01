@@ -9,7 +9,6 @@
   font-family: Lora, 'Times New Roman', Times, serif;
   font-size: 18px;
   min-width: 320px;
-  width: 90%;
 }
 
 /* tab headers */
@@ -55,7 +54,7 @@
 
 .directional-link {
   background-color: #fd7706;
-  color: #fff;
+  color: #fff !important; /* avoid squarespace override */
   border: 0;
   border-radius: 0.5rem;
   flex: auto 0 1rem;
@@ -272,4 +271,130 @@
 .rtv-form-group.flex input[type='checkbox'] {
   position: relative;
   top: -2px;
+}
+
+/* Carryover CSS from pre 10/2021 form */
+
+.rvf .rtv-form-group {
+  margin-bottom: 1rem;
+}
+
+.rvf input[type="text"],
+.rvf input[type="email"],
+.rvf input[type="tel"],
+.rvf textarea {
+  width: 100%;
+  max-width: 400px;
+}
+
+.rvf .submit-button {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+}
+
+@media only screen and (max-width: 500px) {
+
+  .rvf input[type="text"],
+  .rvf input[type="email"],
+  .rvf input[type="tel"],
+  .rvf select,
+  .rvf textarea {
+      max-width: 80vw;
+  }
+
+  .rvf .submit-button {
+      width: 80vw;
+  }
+}
+
+.rvf p.input-help {
+  font-style: italic;
+  margin: 0;
+}
+
+.rvf span.plurality {
+  text-transform: lowercase;
+}
+
+.rvf label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.rvf label {
+  text-transform: capitalize;
+}
+
+.rvf .checkbox-label {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.rvf h2 {
+  color: #fd7706;
+}
+
+.rvf .submit-button {
+  font-size: 22px;
+}
+
+.rvf textarea,
+.rvf select,
+.rvf input,
+/* This selector overrides squarespace */
+#site>.wrapper div:not(.sqs-search-input) .rvf input {
+  color: #4a4a4a !important;
+  padding: 6px 10px;
+  border: 1px solid #4a4a4a !important;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+  /* Try to override browser fonts with squarespace settings */
+  font-family: "Alike", arial, helvetica, sans-serif;
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.rvf textarea:focus,
+.rvf select:focus,
+.rvf input:focus,
+#site>.wrapper div:not(.sqs-search-input) .rvf input:focus {
+  border: 1px solid #2c8898 !important;
+  outline: 0;
+}
+
+.rvf input[type="checkbox"]:focus {
+  outline: 1px dotted #2c8898 !important;
+}
+
+/* BUTTONS */
+
+.rvf button {
+  display: inline-block;
+  padding: 1em 2.25em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #fd7706;
+  color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #fd7706;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.rvf button[disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.rvf button:focus,
+.rvf button:hover {
+  background-color: #cf5f01;
+  border-color: #cf5f01;
+  outline: 0;
 }
