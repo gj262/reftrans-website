@@ -1,5 +1,192 @@
 <!-- Contents of Squarespace: Settings - Advanced - Code Injection - Header -->
 
+<!-- 
+  Restyle the header navigation menu so that it is as wide as the page and below the logo 
+-->
+
+<style>
+  #header #logo {
+      float: initial;
+      margin-bottom: 12px;
+  }
+  
+  #header .primary-nav {
+      float: initial !important;
+      margin-left: initial !important;
+      background-color: #00659a;
+  }
+  
+  .logo-image #header .primary-nav {
+      line-height: 44px;
+  }
+  
+  #header .primary-nav .nav {
+      float: initial;
+      padding: initial;
+      position: initial;
+      margin: 0 0 0 30px;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  #header .primary-nav .nav a:link, #header .primary-nav .nav a:visited, #header .primary-nav .nav .folder-wrapper .show-folder {
+      color: #fff;
+      text-transform: uppercase;
+  }
+  
+  #header .primary-nav .nav a:hover, #header .primary-nav .nav .folder a:hover {
+      color: #fd770b;
+  }
+  
+  #header .primary-nav .nav .folder a {
+      color: #393838;
+  }
+  
+  #header .primary-nav .nav a {
+      font-weight: 600;
+  }
+  
+  #header {
+      padding-bottom: 0px;
+      background-color: #fff;
+      border-bottom: initial;
+  }
+  
+  #site>.wrapper {
+      padding-top: 0px;
+  }
+  
+  .logo-image #header .nav .folder-wrapper .folder {
+      top: 45px;
+  }
+</style>
+
+<style>
+  div#rit-top-right-material {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 1001;
+    pointer-events: none; 
+  }
+
+  .rit-top-right-wrapper {
+    max-width: 967px;
+    margin: 0 auto;
+    padding: 30px 30px;
+    pointer-events: none;
+  }
+
+  .rit-top-right-content {
+    float: right;
+    display: flex;
+    align-items: center;
+    pointer-events: all;
+  }
+
+  .rit-top-right-content .sqs-block-search {
+    padding-top: 15px !important;
+    padding-right: 15px;
+  }
+
+  nav.nav div:nth-child(5),
+  nav.nav div:nth-child(6) {
+    display: none !important;
+  }
+
+  @media (max-width: 640px) {
+    div#rit-top-right-material {
+      display: none;
+    }
+    nav.nav div:nth-child(5),
+    nav.nav div:nth-child(6) {
+      display: initial !important;
+    }
+  }
+</style>
+
+<!-- 
+  Re-style Search & Give so that they are in the top right of the header and not
+  navigation menu items (except in mobile)
+-->
+
+<div id="rit-top-right-material">
+  <div class="rit-top-right-wrapper clear">
+    <div class="rit-top-right-content">
+      <!-- SEARCH -->
+
+      <div
+        class="sqs-block search-block sqs-block-search"
+        data-block-type="33"
+        id="block-yui_3_17_2_1_1635357689164_77899"
+      >
+        <div class="sqs-block-content" id="yui_3_17_2_1_1635359615937_850">
+          <div
+            class="
+              sqs-search-ui-text-input sqs-search-ui-button-wrapper
+              color-dark
+            "
+            data-source="block"
+            data-preview="true"
+            data-collection=""
+            id="yui_3_17_2_1_1635359615937_531"
+          >
+            <div
+              class="spinner-wrapper"
+              id="yui_3_17_2_1_1635359615937_656"
+              hidden="hidden"
+              style="display: none"
+            ></div>
+            <input
+              type="search"
+              class="search-input hover-effect"
+              value=""
+              placeholder="Search"
+              aria-label="Search"
+              id="yui_3_17_2_1_1635359615937_849"
+            />
+            <div
+              id="yui_3_17_2_1_1635359615937_536"
+              class="yui3-widget sqs-widget sqs-search-preview"
+            >
+              <div
+                id="yui_3_17_2_1_1635359615937_538"
+                class="sqs-search-preview-content"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GIVE -->
+      <div
+        class="sqs-block button-block sqs-block-button"
+        data-block-type="53"
+        id="block-yui_3_17_2_1_1635360699820_13113"
+      >
+        <div class="sqs-block-content" id="yui_3_17_2_1_1635360938455_234">
+          <div
+            class="sqs-block-button-container--left"
+            data-animation-role="button"
+            data-alignment="left"
+            data-button-size="medium"
+            id="yui_3_17_2_1_1635360938455_233"
+          >
+            <a
+              href="/give"
+              class="sqs-block-button-element--medium sqs-block-button-element"
+              data-initialized="true"
+              id="yui_3_17_2_1_1635360938455_842"
+              >GIVE</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- This code injection turns "heading 2" and "heading 3" items into
      links based on their content. These links can then be shared with others
      to provide handy scroll to spots within pages.
@@ -98,6 +285,11 @@
         match = document.getElementById(href.slice(1));
 
         if (match) {
+          if ($(match).hasClass(".tab-content")) {
+            console.log("skipping scroll to anchor for the tabbed form");
+            return false;
+          }
+
           anchorOffset = $(match).offset().top - this.getFixedOffset();
           console.log("scrolling to: " + anchorOffset);
           $("html, body").animate({ scrollTop: anchorOffset });
