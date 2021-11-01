@@ -19,12 +19,15 @@
 img.summary-thumbnail-image.loaded:hover {
   opacity: 0.5;
 }
+
 .details {
   display: none;
 }
+
 nav.pagination {
   display: none;
 }
+
 #fpholder {
   max-width: 100%;
   margin-right: auto;
@@ -204,4 +207,9 @@ nav.pagination {
 #header .primary-nav .nav a[href="/give"]:link,
 #header .primary-nav .nav a[href="/give"]:visited {
   color: #fd770b;
+}
+
+/* make the footer buttons as per body buttons */
+#footer a.sqs-block-button-element {
+  color: white;
 }
